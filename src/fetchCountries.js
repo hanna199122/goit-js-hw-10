@@ -7,9 +7,7 @@ function fetchCountries(name) {
     `${BASE_URL}${END_POINT_RESTCOUNTRIES}/${name}?fields=name,capital,population,flags,languages`
   ).then(response => {
     if (!response.ok) {
-      throw new Error(
-        Notiflix.Notify.failure('Oops, there is no country with that name')
-      );
+      throw new Error(response.statusText);
     }
     return response.json();
   });

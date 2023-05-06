@@ -22,6 +22,7 @@ body {
 .country-list,
 .list {
   list-style: none;
+  padding: 0px;
 }
 
 .country-list__item,
